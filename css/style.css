@@ -269,82 +269,418 @@ nav .logo span {
 
 /* Login Start */
 .login-container {
-    max-width: 1024px;
-    min-height: 480px;
-    margin: 128px auto 72px;
-    background-color: var(--light-base);
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: row-reverse;
-    border-radius: 12px;
-    overflow: hidden;
+  max-width: 1024px;
+  min-height: 480px;
+  margin: 128px auto 72px;
+  background-color: var(--light-base);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row-reverse;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.greeting-container {
+  max-width: 512px;
+  padding: 24px;
+  background-color: var(--amber-base);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  text-align: center;
+}
+
+.greeting-container a {
+  padding: 8px 16px;
+  background-color: var(--dark-base);
+  color: var(--light-base);
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+.login-form {
+  margin: auto;
+  text-align: center;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.login-form-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.login-form-body input {
+  font-family: "Nunito", sans-serif;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+}
+
+.login-form-body input[type="submit"] {
+  background-color: var(--green-base);
+  color: var(--light-base);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 640px) {
+  .login-container {
+    flex-direction: column;
+    margin: 96px 8px 48px;
   }
-  
+
   .greeting-container {
-    max-width: 512px;
-    padding: 24px;
-    background-color: var(--amber-base);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 4px;
-    text-align: center;
+    max-width: 100%;
   }
-  
-  .greeting-container a {
-    padding: 8px 16px;
-    background-color: var(--dark-base);
-    color: var(--light-base);
-    border-radius: 4px;
-    font-weight: 700;
+}
+
+@media screen and (max-width: 1024px) {
+  .login-container {
+    margin: 96px 24px 48px;
   }
-  
-  .login-form {
-    margin: auto;
-    text-align: center;
-    padding: 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-  
-  .login-form-body {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-  
-  .login-form-body input {
-    font-family: "Nunito", sans-serif;
-    padding: 12px;
-    border: none;
-    border-radius: 4px;
-    outline: none;
-  }
-  
-  .login-form-body input[type="submit"] {
-    background-color: var(--green-base);
-    color: var(--light-base);
-    font-weight: 700;
-    cursor: pointer;
-  }
-  
-  @media screen and (max-width: 640px) {
-    .login-container {
-      flex-direction: column;
-      margin: 96px 8px 48px;
-    }
-  
-    .greeting-container {
-      max-width: 100%;
-    }
-  }
-  
-  @media screen and (max-width: 1024px) {
-    .login-container {
-      margin: 96px 24px 48px;
-    }
-  }
-  
+}
+
 /* Login End */
+
+/* About Us Start */
+
+/* Hero Section Start */
+.hero-about-us-container {
+  position: relative;
+  min-height: 512px;
+  padding: 196px 8px;
+  background-color: rgba(15, 23, 42, 1);
+}
+
+.hero-about-us-container::before {
+  content: "";
+  background-image: url("../images/backgrounds/italian-foods.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.6; /* Adjust the opacity as needed */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.hero-about-us-container > * {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-about-us {
+  gap: 16px;
+  color: var(--light-base);
+  max-width: 1024px;
+  margin: auto;
+}
+
+.hero-about-us-content {
+  max-width: 640px;
+}
+
+.hero-about-us-content h1 {
+  font-weight: 700;
+}
+
+.hero-about-us-content h1,
+.hero-about-us-content h2 {
+  margin-bottom: 4px;
+}
+
+.hero-about-us-content p {
+  margin-bottom: 16px;
+}
+
+.hero-about-us-content .explore-recipes-link {
+  background-color: var(--green-base);
+  font-weight: 700;
+  color: var(--light-base);
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+@media screen and (max-width: 640px) {
+  .hero-about-us-container {
+    padding: 128px 8px 72px;
+  }
+
+  .hero-about-us-content p {
+    text-align: justify;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .hero-about-us-container {
+    padding: 128px 24px 72px;
+  }
+}
+/* Hero Section End */
+
+/* Achievements Start */
+.achievements-container {
+  background-color: var(--green-base);
+  padding: 24px 0;
+}
+
+.achievements {
+  max-width: 1024px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+}
+
+.achievement {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--light-base);
+}
+
+.achievement svg {
+  width: 48px;
+  height: 48px;
+  display: none;
+}
+
+.achievement h3 {
+  font-weight: 700;
+}
+
+.achievement p {
+  text-align: justify;
+}
+
+@media screen and (max-width: 1024px) {
+  .achievements-container {
+    padding: 24px;
+  }
+
+  .achievements {
+    gap: 12px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .achievements {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .achievement svg {
+    display: none;
+  }
+}
+/* Achievements End */
+
+/* Features Start */
+.features-container {
+  padding: 24px 0;
+}
+
+.features {
+  max-width: 1024px;
+  margin: auto;
+}
+
+.features-head h2 {
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.features-body {
+  display: flex;
+  gap: 24px;
+}
+
+.features-body .feature {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background-color: var(--green-base);
+  color: var(--light-base);
+  padding: 12px;
+  border-radius: 12px;
+  flex: 1;
+}
+
+.features-body .feature h2 {
+  font-weight: 700;
+}
+
+.features-body .feature svg {
+  width: 48px;
+  height: 48px;
+}
+
+@media screen and (max-width: 1024px) {
+  .features-container {
+    padding: 24px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .features-body {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .features-body .feature svg {
+    width: 32px;
+    height: 32px;
+  }
+}
+/* Features End */
+
+/* Testimonials Start */
+.testimonials-container {
+  padding: 24px 0;
+  background-color: var(--dark-base);
+}
+
+.testimonials {
+  max-width: 1024px;
+  margin: auto;
+}
+
+.testimonials-head {
+  color: var(--light-base);
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.testimonials-body {
+  display: flex;
+  gap: 24px;
+  text-align: justify;
+}
+
+.testimonials-body .testimonial {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background-color: var(--amber-base);
+  color: var(--light-base);
+  padding: 12px;
+  border-radius: 12px;
+  flex: 1;
+}
+
+.testimonials-body .testimonial .testimonial-profile {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.testimonials-body .testimonial .testimonial-profile img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+.testimonials-body .testimonial .testimonial-name {
+  font-weight: 700;
+}
+
+.testimonials-body .testimonial svg {
+  width: 48px;
+  height: 48px;
+}
+
+@media screen and (max-width: 1024px) {
+  .testimonials-container {
+    padding: 24px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .testimonials-body {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .testimonials-body .feature svg {
+    width: 32px;
+    height: 32px;
+  }
+}
+/* Testimonials End */
+
+/* Invitation Start */
+.invitation-container {
+  padding: 24px 0;
+}
+
+.invitation {
+  max-width: 1024px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.invitation-content {
+  max-width: 640px;
+}
+
+.invitation-content h2 {
+  font-weight: 700;
+}
+.invitation-content h2 > span {
+  background-color: var(--amber-base);
+}
+
+.invitation-content p {
+  text-align: justify;
+  margin-bottom: 16px;
+}
+
+.invitation-content .join-link {
+  background-color: var(--amber-base);
+  font-weight: 700;
+  color: var(--light-base);
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+.invitation-image img {
+  width: 256px;
+}
+
+@media screen and (max-width: 1024px) {
+  .invitation-container {
+    padding: 24px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .invitation {
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+  }
+
+  .invitation-image img {
+    top: -24px;
+    right: 0;
+    width: 128px;
+    position: absolute;
+    z-index: -1;
+  }
+}
+/* Invitation End */
+
+/* About Us End */
