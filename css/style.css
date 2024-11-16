@@ -1447,3 +1447,104 @@ nav .logo span {
 }
 
 /* Manage Recipes End */
+
+/* Saved Recipes Start */
+.saved-recipes-container {
+  padding: 128px 8px 96px;
+}
+
+.saved-recipes {
+  max-width: 1024px;
+  margin: auto;
+  display: flex;
+  gap: 24px;
+}
+
+.saved-recipes-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.saved-recipes-content .saved-recipes-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(256px, 1fr));
+  gap: 24px;
+}
+
+.saved-recipe-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+  border-radius: 24px;
+  border: 3px solid var(--green-base);
+  background-color: rgba(22, 163, 74, 0.1);
+  position: relative;
+}
+
+.saved-recipe-item img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.saved-recipe-item .user-recipe {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-weight: 700;
+}
+
+.saved-recipe-item .user-recipe img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+
+.saved-recipe-item h3 {
+  font-weight: 700;
+}
+
+.recipe-action {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.recipe-action a svg {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  color: var(--light-base);
+  border-radius: 50%;
+  padding: 8px;
+  border: none;
+  background-color: var(--blue-base);
+}
+
+.recipe-action button  {
+  background-color: transparent;
+  border: none;
+}
+
+.recipe-action button svg {
+  width: 40px;
+  height: 40px;
+  background-color: var(--blue-base);
+  color: var(--light-base);
+  font-weight: 700;
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Saved Recipes End */

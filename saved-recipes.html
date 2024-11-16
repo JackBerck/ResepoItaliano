@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kelola Resep | ResepoItaliano</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/core.css" />
+  </head>
+  <body class="normal-font-size">
+    <!-- Navigation Start -->
+    <div class="navigation-container">
+      <nav class="navigation-bar">
+        <a href="#" class="logo">
+          <img src="/images/logo.png" alt="ResepoItaliano Logo" />
+          <span class="big-normal-font-size">ResepoItaliano</span>
+        </a>
+        <div class="hamburger-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="navigation-links-container">
+          <ul class="navigation-links">
+            <li class="navigation-link"><a href="/">Beranda</a></li>
+            <li class="navigation-link">
+              <a href="/about-us.html">Tentang Kami</a>
+            </li>
+            <li class="navigation-link">
+              <a href="/login.html" class="login-button">Masuk</a>
+            </li>
+            <li class="navigation-link">
+              <a href="/register.html" class="register-button">Daftar</a>
+            </li>
+            <li class="navigation-link">
+              <a href="/profile.html" class="profile-photo"
+                ><img
+                  src="./images/profiles/default.jpg"
+                  alt="Profile photo"
+                  class="profile-photo"
+                /><span>Zaki Dzulfikar</span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!-- Navigation End -->
+    <!-- Aside Start -->
+    <div class="saved-recipes-container">
+      <div class="saved-recipes">
+        <!-- Tombol untuk aside -->
+        <button id="asideToggle" class="aside-toggle">
+          <svg
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+            class="icon"
+          >
+            <path
+              d="M495.9 166.6c3.2 8.7 .5 18.4-6.4 24.6l-43.3 39.4c1.1 8.3 1.7 16.8 1.7 25.4s-.6 17.1-1.7 25.4l43.3 39.4c6.9 6.2 9.6 15.9 6.4 24.6c-4.4 11.9-9.7 23.3-15.8 34.3l-4.7 8.1c-6.6 11-14 21.4-22.1 31.2c-5.9 7.2-15.7 9.6-24.5 6.8l-55.7-17.7c-13.4 10.3-28.2 18.9-44 25.4l-12.5 57.1c-2 9.1-9 16.3-18.2 17.8c-13.8 2.3-28 3.5-42.5 3.5s-28.7-1.2-42.5-3.5c-9.2-1.5-16.2-8.7-18.2-17.8l-12.5-57.1c-15.8-6.5-30.6-15.1-44-25.4L83.1 425.9c-8.8 2.8-18.6 .3-24.5-6.8c-8.1-9.8-15.5-20.2-22.1-31.2l-4.7-8.1c-6.1-11-11.4-22.4-15.8-34.3c-3.2-8.7-.5-18.4 6.4-24.6l43.3-39.4C64.6 273.1 64 264.6 64 256s.6-17.1 1.7-25.4L22.4 191.2c-6.9-6.2-9.6-15.9-6.4-24.6c4.4-11.9 9.7-23.3 15.8-34.3l4.7-8.1c6.6-11 14-21.4 22.1-31.2c5.9-7.2 15.7-9.6 24.5-6.8l55.7 17.7c13.4-10.3 28.2-18.9 44-25.4l12.5-57.1c2-9.1 9-16.3 18.2-17.8C227.3 1.2 241.5 0 256 0s28.7 1.2 42.5 3.5c9.2 1.5 16.2 8.7 18.2 17.8l12.5 57.1c15.8 6.5 30.6 15.1 44 25.4l55.7-17.7c8.8-2.8 18.6-.3 24.5 6.8c8.1 9.8 15.5 20.2 22.1 31.2l4.7 8.1c6.1 11 11.4 22.4 15.8 34.3zM256 336a80 80 0 1 0 0-160 80 80 0 1 0 0 160z"
+            ></path>
+          </svg>
+        </button>
+        <!-- Aside -->
+        <aside id="asideMenu" class="aside-menu">
+          <div class="menu-content">
+            <h2>Settings</h2>
+            <a href="/profile" class="aside-link">Pengaturan Akun</a>
+            <a href="/profile/produk-tersimpan" class="aside-link"
+              >Resep Tersimpan</a
+            >
+            <a href="/profile/kelola-produk" class="aside-link">Kelola Resep</a>
+            <a href="/profile/keluar" class="aside-link exit">Keluar</a>
+          </div>
+        </aside>
+        <!-- Aside End -->
+        <!-- Profile Settings Start -->
+        <!-- Recipe Section Start -->
+        <div class="saved-recipes-content">
+          <h2 class="title-font-size">Resep Terbaru</h2>
+          <div class="saved-recipes-list">
+            <div class="saved-recipe-item">
+              <a href="#"
+                ><img
+                  src="./images/recipes/spaghetti-carbonara.jpeg"
+                  alt="Spaghetti Carbonara"
+              /></a>
+              <div class="user-recipe">
+                <img
+                  src="./images/profiles/zaki-dzulfikar.png"
+                  alt="Zaki Dzulfikar Foto Profil"
+                />
+                <p>Zaki Dzulfikar</p>
+              </div>
+              <div class="recipe-item-content">
+                <a href="#"
+                  ><h3 class="subtitle-font-size">Spaghetti Carbonara</h3></a
+                >
+                <p>
+                  Spaghetti | Daging Asap | Telur | Keju Parmesan | Garam | Lada
+                </p>
+              </div>
+              <div class="recipe-time-past small-font-size">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path
+                    d="M464 256A208 208 0 1 1 48 256a208 208 0 1 1 416 0zM0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM232 120l0 136c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2 280 120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"
+                  />
+                </svg>
+                <span>3 hari yang lalu</span>
+              </div>
+              <div class="recipe-action">
+                <a href="/post/update/<?= $post->id ?>">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M362.7 19.3L314.3 67.7 444.3 197.7l48.4-48.4c25-25 25-65.5 0-90.5L453.3 19.3c-25-25-65.5-25-90.5 0zm-71 71L58.6 323.5c-10.4 10.4-18 23.3-22.2 37.4L1 481.2C-1.5 489.7 .8 498.8 7 505s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L421.7 220.3 291.7 90.3z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="saved-recipe-item">
+              <a href="#"
+                ><img
+                  src="./images/recipes/margherita-pizza.jpg"
+                  alt="Margherita Pizza"
+              /></a>
+              <div class="user-recipe">
+                <img
+                  src="./images/profiles/nadia-putri.png"
+                  alt="Nadia Putri Foto Profil"
+                />
+                <p>Nadia Putri</p>
+              </div>
+              <div class="recipe-item-content">
+                <a href="#"
+                  ><h3 class="subtitle-font-size">Margherita Pizza</h3></a
+                >
+                <p>
+                  Adonan Pizza | Saus Tomat | Mozzarella | Daun Basil | Garam |
+                  Minyak Zaitun
+                </p>
+              </div>
+              <div class="recipe-time-past small-font-size">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path
+                    d="M464 256A208 208 0 1 1 48 256a208 208 0 1 1 416 0zM0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM232 120l0 136c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2 280 120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"
+                  />
+                </svg>
+                <span>3 hari yang lalu</span>
+              </div>
+              <div class="recipe-action">
+                <a href="/post/update/<?= $post->id ?>">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M362.7 19.3L314.3 67.7 444.3 197.7l48.4-48.4c25-25 25-65.5 0-90.5L453.3 19.3c-25-25-65.5-25-90.5 0zm-71 71L58.6 323.5c-10.4 10.4-18 23.3-22.2 37.4L1 481.2C-1.5 489.7 .8 498.8 7 505s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L421.7 220.3 291.7 90.3z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="saved-recipe-item">
+              <a href="#"
+                ><img src="./images/recipes/tiramisu.jpg" alt="Tiramisu"
+              /></a>
+              <div class="user-recipe">
+                <img
+                  src="./images/profiles/rizky-pratama.png"
+                  alt="Rizky Pratama Foto Profil"
+                />
+                <p>Rizky Pratama</p>
+              </div>
+              <div class="recipe-item-content">
+                <a href="#"><h3 class="subtitle-font-size">Tiramisu</h3></a>
+                <p>Mascarpone | Gula | Telur | Kopi | Cokelat Bubuk</p>
+              </div>
+              <div class="recipe-time-past small-font-size">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path
+                    d="M464 256A208 208 0 1 1 48 256a208 208 0 1 1 416 0zM0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM232 120l0 136c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2 280 120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"
+                  />
+                </svg>
+                <span>3 hari yang lalu</span>
+              </div>
+              <div class="recipe-action">
+                <a href="/post/update/<?= $post->id ?>">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M362.7 19.3L314.3 67.7 444.3 197.7l48.4-48.4c25-25 25-65.5 0-90.5L453.3 19.3c-25-25-65.5-25-90.5 0zm-71 71L58.6 323.5c-10.4 10.4-18 23.3-22.2 37.4L1 481.2C-1.5 489.7 .8 498.8 7 505s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L421.7 220.3 291.7 90.3z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Recipe Section End -->
+      </div>
+      <!-- Profile Settings End -->
+    </div>
+    <!-- Aside Start -->
+    <!-- Footer Start -->
+    <div class="footer-container">
+      <footer class="footer">
+        <a href="#"
+          ><img src="./images/logo.png" alt="ResepoItaliano Logo" /><span
+            >ResepoItaliano</span
+          ></a
+        >
+        <div class="social-medias">
+          <a href="#">
+            <svg
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"
+            >
+              <path
+                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+              />
+            </svg>
+          </a>
+          <a href="#"
+            ><svg
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"
+            >
+              <path
+                d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"
+              /></svg
+          ></a>
+        </div>
+        <p>ResepoItaliano <span id="getYear"></span>. All right reserved</p>
+      </footer>
+    </div>
+    <!-- Footer End -->
+    <script src="js/app.js"></script>
+    <script>
+      const asideMenu = document.getElementById("asideMenu");
+      const asideToggle = document.getElementById("asideToggle");
+
+      asideToggle.addEventListener("click", () => {
+        const isOpen = asideMenu.style.transform === "translateX(0%)";
+        asideMenu.style.transform = isOpen
+          ? "translateX(-100%)"
+          : "translateX(0%)";
+        asideToggle.style.transform = isOpen
+          ? "translateX(0)"
+          : "translateX(16rem)";
+      });
+    </script>
+  </body>
+</html>
