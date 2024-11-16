@@ -20,7 +20,7 @@ function addIngredient() {
   newIngredientItem.className = "ingredient-item";
   newIngredientItem.innerHTML = `
         <span class="ingredient-number">${ingredientCount}.</span>
-        <input type="text" class="ingredient" required />
+        <input class="normal-font-size" type="text" required />
     `;
   ingredientsList.appendChild(newIngredientItem);
 }
@@ -37,41 +37,43 @@ function addStep() {
   stepsList.appendChild(newStepItem);
 }
 
-document.getElementById("image").addEventListener("change", function (event) {
-  const previewContainer = document.getElementById("image-preview-container");
-  previewContainer.innerHTML = ""; // Clear previous previews
+// Fungsi untuk mengumpulkan bahan dan langkah
+function gatherRecipeData() {
+  const ingredients = Array.from(
+    document.querySelectorAll(".ingredient-item input")
+  )
+    .map((input) => input.value)
+    .filter((value) => value.trim() !== ""); // Filter untuk menghapus input kosong
 
-  Array.from(event.target.files).forEach((file, index) => {
-    const reader = new FileReader();
+  const steps = Array.from(document.querySelectorAll(".step-item input"))
+    .map((input) => input.value)
+    .filter((value) => value.trim() !== ""); // Filter untuk menghapus input kosong
 
-    reader.onload = function (e) {
-      // Create preview element
-      const previewElement = document.createElement("div");
-      previewElement.classList.add("image-preview");
+  // Menggabungkan semua bahan dan langkah dengan simbol pemisah, misalnya "; "
+  const ingredientsString = ingredients.join("; ");
+  const stepsString = steps.join("; ");
 
-      // Create image element
-      const img = document.createElement("img");
-      img.src = e.target.result;
-      img.alt = `Preview ${index + 1}`;
-      previewElement.appendChild(img);
+  // Jika Anda ingin menggabungkan semua dalam satu string
+  const recipeData = {
+    title: document.getElementById("name").value,
+    category: document.getElementById("category").value,
+    ingredients: ingredientsString,
+    steps: stepsString,
+    note: document.getElementById("note").value,
+  };
 
-      // Create remove button
-      const removeButton = document.createElement("button");
-      removeButton.classList.add("remove-button");
-      removeButton.innerHTML = '<svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>';
-      removeButton.addEventListener("click", () => {
-        const filesArray = Array.from(event.target.files);
-        filesArray.splice(index, 1);
-        const newFileList = new DataTransfer();
-        filesArray.forEach((file) => newFileList.items.add(file));
-        event.target.files = newFileList.files;
-        previewElement.remove();
-      });
+  console.log(recipeData); // Anda bisa mengirimkan ini ke database
+}
 
-      previewElement.appendChild(removeButton);
-      previewContainer.appendChild(previewElement);
-    };
+// Menambahkan event listener pada tombol "Terbitkan"
+document
+  .getElementById("submitAside")
+  .addEventListener("click", function (event) {
+    event.preventDefault(); // Mencegah form kedua dari pengiriman default
 
-    reader.readAsDataURL(file);
+    // Mengumpulkan data dari form pertama
+    gatherRecipeData(); // Panggil fungsi yang mengumpulkan data dari form pertama
+
+    // Submit form pertama
+    document.getElementById("recipeForm").submit();
   });
-});
